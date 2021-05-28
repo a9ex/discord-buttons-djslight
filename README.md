@@ -1,3 +1,5 @@
+**Works only with discord.js-light**
+
 <div align="center">
 
   <p>
