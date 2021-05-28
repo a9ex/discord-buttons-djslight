@@ -15,7 +15,7 @@ module.exports = (client) => {
     Structures.extend("TextChannel", () => TextChannel);
     Structures.extend("DMChannel", () => DMChannel);
 
-    client.ws.on('INTERACTION_CREATE', data => {
+    client.ws.on('INTERACTION_CREATE', async (data) => {
 
         if (!data.message) return;
 
