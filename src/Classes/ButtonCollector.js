@@ -1,6 +1,6 @@
 const { Collector } = require("discord.js-light");
-const Collection = require('discord.js').Collection;
-const { Events } = require('discord.js').Constants;
+const Collection = require('discord.js-light').Collection;
+const { Events } = require('discord.js-light').Constants;
 
 class ButtonCollector extends Collector {
   constructor(message, filter, options = {}) {

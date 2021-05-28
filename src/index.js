@@ -20,7 +20,7 @@ module.exports = (client) => {
         if (!data.message) return;
 
         if (data.data.component_type === 2) {
-            if (!client.channels.cache.get(data.channel_id)) {
+            if (!client.channels.cache.get(data.channel_id)) { // Channels are not cached by default with d.js-light
                 await client.channels.fetch(data.channel_id)
             }
 

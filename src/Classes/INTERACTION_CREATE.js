@@ -20,7 +20,7 @@ class ButtonEvent {
 
         this.guild = data.guild_id ? client.guilds.cache.get(data.guild_id) : undefined;
 
-        this.channel = client.channels.cache.get(data.channel_id);
+        this.channel = client.channels.cache.get(data.channel_id); // Need to be cached
 
         this.clicker = {};
 
