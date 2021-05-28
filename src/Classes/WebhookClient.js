@@ -1,4 +1,4 @@
-const { WebhookClient } = require('discord.js');
+const { WebhookClient } = require('discord.js-light');
 const APIMessage = require('./APIMessage').APIMessageMain;
 
 module.exports = class extends WebhookClient {

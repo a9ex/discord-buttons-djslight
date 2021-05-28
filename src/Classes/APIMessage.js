@@ -1,4 +1,4 @@
-const { APIMessage } = require("discord.js");
+const { APIMessage } = require("discord.js-light");
 const Util = require('../Util');
 const MessageButton = require('./MessageButton');
 

@@ -37,9 +37,9 @@ module.exports = {
         }
     },
     checkDjsVersion() {
-        let version = require('discord.js').version.split('');
-
-        if (parseInt(version[0] + version[1]) > 11) {
+        let versions = require('discord.js-light').version.split(' ');
+        let version = versions[1].slice(1, -1) 
+        if (parseInt(version) > 11) {
             return true;
         } else {
             return false;

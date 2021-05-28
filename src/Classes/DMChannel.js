@@ -1,4 +1,4 @@
-const { Structures } = require("discord.js");
+const { Structures } = require("discord.js-light");
 const { APIMessageMain } = require('./APIMessage');
 
 class DMChannel extends Structures.get("DMChannel") {

@@ -1,4 +1,4 @@
-const { Collector } = require("discord.js");
+const { Collector } = require("discord.js-light");
 const Collection = require('discord.js').Collection;
 const { Events } = require('discord.js').Constants;
 

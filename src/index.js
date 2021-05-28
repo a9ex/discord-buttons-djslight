@@ -1,4 +1,4 @@
-const { Structures } = require("discord.js");
+const { Structures } = require("discord.js-light");
 const Message = require('./Classes/Message');
 const TextChannel = require('./Classes/TextChannel');
 const DMChannel = require('./Classes/DMChannel');
@@ -20,6 +20,10 @@ module.exports = (client) => {
         if (!data.message) return;
 
         if (data.data.component_type === 2) {
+            if (!client.channels.cache.get(data.channel_id)) {
+                await client.channels.fetch(data.channel_id)
+            }
+
             const button = new INTERACTION_CREATE(client, data);
 
             client.emit('clickButton', button);
