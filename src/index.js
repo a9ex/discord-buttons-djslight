@@ -21,7 +21,7 @@ module.exports = (client) => {
 
         if (data.data.component_type === 2) {
             if (!client.channels.cache.get(data.channel_id)) { // Channels are not cached by default with d.js-light
-                await client.channels.fetch(data.channel_id)
+                await client.channels.fetch(data.channel_id) // If you don't cache the members, you must fetch them otherwise clickButton#clicker will return null
             }
 
             const button = new INTERACTION_CREATE(client, data);
