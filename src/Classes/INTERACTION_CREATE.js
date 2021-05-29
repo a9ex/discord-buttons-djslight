@@ -20,15 +20,15 @@ class ButtonEvent {
 
         this.guild = data.guild_id ? client.guilds.cache.get(data.guild_id) : undefined;
 
-        this.channel = client.channels.cache.get(data.channel_id); // Need to be cached
+        this.channel = client.channels.cache.get(data.channel_id); 
 
         this.clicker = {};
 
         if (this.guild) {
-            this.clicker.member = this.guild.members.resolve(data.member.user.id);
-            this.clicker.user = this.client.users.resolve(data.member.user.id);
+            this.clicker.member = this.guild.members.resolve(data.member.user.id) || data.member;
+            this.clicker.user = this.client.users.resolve(data.member.user.id) || data.member.user;
         } else {
-            this.clicker.user = this.client.users.resolve(data.user.id);
+            this.clicker.user = this.client.users.resolve(data.user.id) || data.user;
         }
 
         this.message = new Message(client, data.message, this.channel);
