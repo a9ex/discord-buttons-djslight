@@ -1,4 +1,5 @@
-**Works only with discord.js-light**
+**Update: The issue has been fixed on the original repo.
+You can now use d.js-light**
 
 <div align="center">
 
